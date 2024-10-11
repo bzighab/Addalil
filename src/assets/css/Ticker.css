@@ -1,0 +1,46 @@
+.ticker-container {
+  position: fixed; /* Garder le ticker fixé en bas */
+  bottom: 0; /* Aligné en bas de la vue */
+  left: 0; /* Aligné à gauche de la vue */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Assure que le titre est à droite et le contenu à gauche */
+  width: 100%;
+  background-color: rgba(0, 150, 438, 0.7); /* Couleur de fond du ticker */
+  color: white;
+  font-size: 1.5rem; /* Ajustable pour la lisibilité */
+  overflow: hidden;
+  direction: ltr;
+
+
+}
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-scroll 60s linear infinite; /* Replace 60s with your desired duration */
+
+  flex-grow: 1; /* Permet à cette section de prendre l'espace restant */
+  overflow: hidden; /* Empêche le dépassement des éléments */
+  padding-left: 20px; /* Espace entre le contenu et le titre */
+}
+
+.ticker-item {
+  margin-left: 5px; /* Espacement entre les éléments */
+  padding: 10px 0;
+  font-size: 1.7rem; /* Ajustable pour la lisibilité */
+}
+
+.ticker-title {
+ 
+  background-color: rgba(0, 150, 120, 1);
+  padding: 10px;
+  font-size: 2.2rem;
+  white-space: nowrap;
+  z-index: 1000000000;
+  border-top-left-radius: 20px; /* Courbure du coin supérieur gauche */
+  border-bottom-left-radius: 20px; /* Courbure du coin inférieur gauche */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre optionnelle pour la profondeur */
+  color: white; /* Couleur du texte */
+  width: 10%;
+}

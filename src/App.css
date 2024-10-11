@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'NafeesRegular';
+    src: url('../src/assets/fonts/LFCSOPENSOURCE-05-V2-10.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Hauteur totale pour le corps */
+    overflow: hidden; /* Empêche le défilement */
+    font-family: 'DroidArabicKufiRegular', sans-serif !important;
+    text-shadow:0 1px 1px rgba(255, 255, 255, 0.5), 0 -1px 0 rgba(77, 46, 25, 0.6);
+}
+.header {
+    text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Space below the header */
+    position: relative; /* For positioning of potential overlays */
+}
+
+.header h1, .header h2 {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    padding: 15px 20px; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    color: #ffffff; /* White text color */
+    display: block; /* Makes sure each heading takes full width */
+    margin: 10px auto; /* Centers and adds spacing */
+    max-width: 100%; /* Limits the maximum width for better readability */
+}
+
+/* Optional: Adjust font sizes if needed */
+.header h1 {
+    font-size: 4.5em; /* Larger size for the main title */
+}
+
+.header h2 {
+    font-size: 3.5em; /* Smaller size for the date */
+}
+
+/* Add a text shadow for better readability */
+.header h1, .header h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Shadow for better contrast */
+}
+/* Ensure this is applied to your container */
+.overlay {
+    position: absolute; /* Positions the overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: overlay to darken the video */
+    z-index: 2; /* Place the overlay above the video */
+}
+
+.video-background {
+    position: absolute; /* Fixe la vidéo à la position de son parent */
+    top: 0;
+    left: 0;
+    width: 100%; /* Remplit la largeur de l'écran */
+    height: 100%; /* Remplit la hauteur de l'écran */
+    object-fit: cover; /* Garde les proportions de la vidéo */
+    z-index: 1; /* Place la vidéo derrière le contenu */
+}
+
+.container {
+    position: relative; /* Nécessaire pour le positionnement des enfants */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 80vh; /* Hauteur totale pour le conteneur */
+    box-sizing: border-box;
+    z-index: 2; /* Assure que le contenu est au-dessus de la vidéo */
+    color: #ffffff; /* Couleur de texte clair */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 3; /* Assure que le contenu est au-dessus de la vidéo */
+}
+
+.top-row {
+    display: flex;
+    justify-content: center; /* Centre les éléments dans la ligne supérieure */
+    align-items: center; /* Centre verticalement */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.jumua, .shuruk {
+    background-color: rgba(0, 150, 438, 0.7); /* Bleu transparent */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
+    flex: 1;
+    margin: 0 10px;
+    min-width: 120px; /* Largeur minimum pour meilleure visibilité */
+    font-size: 40px; /* Ajuste la taille de police pour Jumua et Shuruk */
+}
+
+.current-time {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 150, 120, 0.7); /* Bleu transparent */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 2; /* Prend plus de place que les autres */
+    margin: 0 10px;
+    font-size: 80px; /* Taille de police grande pour le temps actuel */
+}
+
+.prayers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille adaptable avec plus d'espace */
+    gap: 60px; /* Espace entre les temps de prière */
+    width: 100%;
+}
+
+.prayer {
+    background-color: rgba(0, 150, 438, 0.7); /* Bleu transparent */
+    color: #ffffff;
+    padding: 30px; /* Augmente le padding pour plus d'espace intérieur */
+    border-radius: 12px; /* Coins arrondis pour un aspect plus élégant */
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+    font-size: 40px; /* Taille de police augmentée pour plus de visibilité */
+    margin-bottom: 15px; /* Ajout d'une marge en bas pour l'espacement entre les prières */
+   
+}
+
+
+/* Media Queries pour Responsivité */
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 15px;
+    }
+
+    .top-row {
+        flex-direction: column; /* Empile les éléments de la rangée supérieure sur les petits écrans */
+    }
+
+    .current-time {
+        margin: 10px 0; /* Espacement vertical pour l'heure actuelle */
+        font-size: 30px; /* Ajustement de la taille de police sur petits écrans */
+    }
+
+    .jumua, .shuruk {
+        font-size: 18px; /* Réduction de la taille de la police sur les petits écrans */
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .prayers {
+        grid-template-columns: 1fr; /* Colonne unique sur les très petits écrans */
+    }
+}
+
+
+.overlay-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    z-index: 10; /* Ensure it overlays other content */
+  }
+  
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Make sure the video stays behind everything */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1; /* Content on top of the video but behind the overlay */
+  }
+  

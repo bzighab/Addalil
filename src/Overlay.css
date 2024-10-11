@@ -1,0 +1,56 @@
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1b7f5e; /* Green background with slight transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Blinking text styles */
+.blinking-text {
+   font-family: 'DroidArabicKufiRegular', serif; 
+
+   font-weight: normal;
+   font-style: normal;
+    color: #0a1c10; /* White color for the text */
+    text-align: center;
+    animation: blink 4s infinite; /* Keep the blinking effect */
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    max-font-size: 100px; /* Limit maximum font size for larger screens */
+    min-font-size: 24px; /* Limit minimum font size for smaller screens */
+}
+
+/* Blink animation */
+@keyframes blink {
+    0% {
+        opacity: 0.5; /* Slightly transparent */
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Glowing effect in white */
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+        text-shadow: 0 0 30px rgba(255, 255, 255, 1); /* Strong glow in white */
+    }
+    100% {
+        opacity: 0.5; /* Slightly transparent again */
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Glowing effect in white */
+    }
+}
+
+/* Media queries for additional adjustments */
+@media (max-width: 600px) {
+    .blinking-text {
+        font-size: 8vw; /* Increase size on smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .blinking-text {
+        font-size: 4vw; /* Decrease size on larger screens */
+    }
+}

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'AlBattarRegular';
+    src: url('./KacstArt.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LFCSOPENSOURCE05V205V2';
+    src: url('./LFCSOPENSOURCE-05-V2-10') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidArabicKufiRegular';
+    src: url('./DroidKufi-Regular.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Apply the font globally */
+body {
+    font-family: 'DroidArabicKufiRegular'/* Fallback to serif */
+}
