@@ -77,6 +77,7 @@ body {
     box-sizing: border-box;
     z-index: 2; /* Assure que le contenu est au-dessus de la vidéo */
     color: #ffffff; /* Couleur de texte clair */
+    justify-content: center;
 }
 
 .header {

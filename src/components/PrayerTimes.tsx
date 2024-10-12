@@ -52,7 +52,7 @@ const PrayerTimes: React.FC<PrayerTimesProps> = ({ onPrayerTimeMatch }) => {
       // Check if it's time for Adhan and prevent playing it multiple times
       Object.entries(prayerTimes).forEach(([key, time]) => {
         // const formattedPrayerTime = ${time}:00; // Format time for comparison
-        const formattedPrayerTime = "00:32:00"; // Format time for comparison
+        const formattedPrayerTime = "23:40:00"; // Format time for comparison
 
         if (
           currentTime === formattedPrayerTime &&
