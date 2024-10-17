@@ -1,46 +1,63 @@
-.ticker-container {
-  position: fixed; /* Garder le ticker fixé en bas */
-  bottom: 0; /* Aligné en bas de la vue */
-  left: 0; /* Aligné à gauche de la vue */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Assure que le titre est à droite et le contenu à gauche */
-  width: 100%;
-  background-color: rgba(0, 150, 438, 0.7); /* Couleur de fond du ticker */
-  color: white;
-  font-size: 1.5rem; /* Ajustable pour la lisibilité */
-  overflow: hidden;
-  direction: ltr;
-
-
-}
-
-.ticker-content {
-  display: flex;
-  white-space: nowrap;
-  animation: ticker-scroll 60s linear infinite; /* Replace 60s with your desired duration */
-
-  flex-grow: 1; /* Permet à cette section de prendre l'espace restant */
-  overflow: hidden; /* Empêche le dépassement des éléments */
-  padding-left: 20px; /* Espace entre le contenu et le titre */
-}
-
-.ticker-item {
-  margin-left: 5px; /* Espacement entre les éléments */
-  padding: 10px 0;
-  font-size: 1.7rem; /* Ajustable pour la lisibilité */
-}
-
 .ticker-title {
- 
+  position: fixed;
+  width: 22%;
+  right: 0;
+  background-color: red;
+  bottom: 0;
+  text-align: center;
+  font-size: 3rem;
+  z-index: 1;
+  color: white;
+  border-top-left-radius: 100px;
+  font-family: 'thuluth';
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+.ticker-wrap {
+  width: 85%;
+  height: 4rem;
   background-color: rgba(0, 150, 120, 1);
-  padding: 10px;
-  font-size: 2.2rem;
+}
+
+.ticker {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
   white-space: nowrap;
-  z-index: 1000000000;
-  border-top-left-radius: 20px; /* Courbure du coin supérieur gauche */
-  border-bottom-left-radius: 20px; /* Courbure du coin inférieur gauche */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre optionnelle pour la profondeur */
-  color: white; /* Couleur du texte */
-  width: 20%;
+  padding-right: 100%; // taken from container as display inline-block
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: white;
+  font-family:  'DroidArabicKufiRegular'
+}
+
+@keyframes ticker {
+  100% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+
+  }
+  0% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker {
+  animation-name: ticker;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 100s; // tweak based on number of items/desired speed
 }

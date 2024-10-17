@@ -19,7 +19,7 @@ const Ticker: React.FC<TickerProps> = ({ title, items }) => {
           { transform: "translateX(100%)" }, // Fin à gauche
         ],
         {
-          duration: 60000, // Durée pour le défilement
+          duration: 600000, // Durée pour le défilement
           iterations: Infinity,
           easing: "linear",
         }
@@ -30,16 +30,32 @@ const Ticker: React.FC<TickerProps> = ({ title, items }) => {
   }, [items]);
 
   return (
-    <div className="ticker-container">
-      <div className="ticker-content" ref={tickerRef}>
-        {/* Répéter les éléments pour un défilement fluide */}
-        {items.concat(items).map((item, index) => (
-          <span key={index} className="ticker-item">
-            {item}
-          </span>
-        ))}
+    <div className="footer">
+      <div className="ticker-title">أحاديث نبوية</div>
+      <div className="ticker-wrap">
+        <div className="ticker">
+          <div className="ticker__item">
+            {" "}
+            " - أَخْبَرَنَا قُتَيْبَةُ بْنُ سَعِيدٍ، قَالَ حَدَّثَنَا سُفْيَانُ،
+            عَنِ الزُّهْرِيِّ، عَنْ أَبِي سَلَمَةَ، عَنْ أَبِي هُرَيْرَةَ، أَنَّ
+            النَّبِيَّ صلى الله عليه وسلم قَالَ إِذَا اسْتَيْقَظَ أَحَدُكُمْ
+            مِنْ نَوْمِهِ فَلاَ يَغْمِسْ يَدَهُ فِي وَضُوئِهِ حَتَّى يَغْسِلَهَا
+            ثَلاَثًا فَإِنَّ أَحَدَكُمْ لاَ يَدْرِي أَيْنَ بَاتَتْ يَدُهُ",
+          </div>
+          <div className="ticker__item">
+            " - عَنْ أَبِي هُرَيْرَةَ ـ رضى الله عنه ـ عَنِ النَّبِيِّ صلى الله
+            عليه وسلم قَالَ الإِيمَانُ بِضْعٌ وَسِتُّونَ شُعْبَةً، وَالْحَيَاءُ
+            شُعْبَةٌ مِنَ الإِيمَانِ " - ,
+          </div>
+          <div className="ticker__item">
+            {" "}
+            " - عَنْ أَبِي هُرَيْرَةَ، عَنْ رَسُولِ اللَّهِ صلى الله عليه وسلم
+            أَنَّهُ قَالَ 'سَيَكُونُ فِي آخِرِ أُمَّتِي أُنَاسٌ يُحَدِّثُونَكُمْ
+            مَا لَمْ تَسْمَعُوا أَنْتُمْ وَلاَ آبَاؤُكُمْ فَإِيَّاكُمْ
+            وَإِيَّاهُمْ ", -
+          </div>
+        </div>
       </div>
-      <div className="ticker-title">{title}</div>
     </div>
   );
 };

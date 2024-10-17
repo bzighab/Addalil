@@ -1,3 +1,11 @@
+
+@font-face {
+    font-family: 'maghribi';
+    src: url('./arabswell_1.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'AlBattarRegular';
     src: url('./KacstArt.ttf') format('truetype'); /* Adjust the path if necessary */
@@ -5,12 +13,7 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'LFCSOPENSOURCE05V205V2';
-    src: url('./LFCSOPENSOURCE-05-V2-10') format('truetype'); /* Adjust the path if necessary */
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: 'DroidArabicKufiRegular';
@@ -19,9 +22,44 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Naskh';
+    src: url('./KFGQPC-Uthman-Taha-Naskh-Regular.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'diwani';
+    src: url('./46-Diwani-Bent.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
 
-/* Apply the font globally */
-body {
-    font-family: 'DroidArabicKufiRegular'/* Fallback to serif */
+@font-face {
+    font-family: 'kufi-beauty';
+    src: url('./MCS Mamloky S_U adorned..ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'thuluth';
+    src: url('./DTHULUTH-II-1.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kufi-new';
+    src: url('./MCS-Kufy-madany-S_U-normal..ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hijaz';
+    src: url('./MCS-Hijaz-S_I-adorn.-1.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
 }

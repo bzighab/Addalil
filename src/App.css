@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'NafeesRegular';
-    src: url('../src/assets/fonts/LFCSOPENSOURCE-05-V2-10.ttf') format('truetype'); /* Adjust the path if necessary */
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
 body {
 
     margin: 0;
@@ -32,13 +23,16 @@ body {
     max-width: 100%; /* Limits the maximum width for better readability */
 }
 
+
 /* Optional: Adjust font sizes if needed */
 .header h1 {
     font-size: 4.5em; /* Larger size for the main title */
+    font-family: 'maghribi';
 }
 
 .header h2 {
     font-size: 3.5em; /* Smaller size for the date */
+    font-family: 'maghribi';
 }
 
 /* Add a text shadow for better readability */
@@ -104,7 +98,8 @@ body {
     flex: 1;
     margin: 0 10px;
     min-width: 120px; /* Largeur minimum pour meilleure visibilité */
-    font-size: 40px; /* Ajuste la taille de police pour Jumua et Shuruk */
+    font-size: 4rem !important; /* Ajuste la taille de police pour Jumua et Shuruk */
+    font-family: 'DroidArabicKufiRegular';
 }
 
 .current-time {
@@ -116,7 +111,8 @@ body {
     text-align: center;
     flex: 2; /* Prend plus de place que les autres */
     margin: 0 10px;
-    font-size: 80px; /* Taille de police grande pour le temps actuel */
+    font-size: 4rem; /* Taille de police grande pour le temps actuel */
+    font-family: 'DroidArabicKufiRegular';
 }
 
 .prayers {
@@ -124,6 +120,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille adaptable avec plus d'espace */
     gap: 60px; /* Espace entre les temps de prière */
     width: 100%;
+    font-family: 'DroidArabicKufiRegular';
+
+
 }
 
 .prayer {
@@ -133,8 +132,8 @@ body {
     border-radius: 12px; /* Coins arrondis pour un aspect plus élégant */
     text-align: center;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
-    font-size: 40px; /* Taille de police augmentée pour plus de visibilité */
-    margin-bottom: 15px; /* Ajout d'une marge en bas pour l'espacement entre les prières */
+    font-size: 4rem !important; /* Taille de police augmentée pour plus de visibilité */
+    margin: auto;
    
 }
 
@@ -197,4 +196,23 @@ body {
     position: relative;
     z-index: 1; /* Content on top of the video but behind the overlay */
   }
+
+/*   .Hijri-day { position:fixed; padding-left: 1rem}
+  .Hijri-month { padding-left: 1rem}
+
+  .gregorian-day { position:fixed; padding-left: 1rem}
+  .gregorian-month { padding-left: 1rem} */
   
+  .hijri-date, .gregorian-date {
+    gap: 10px; /* Space between the spans */
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center; /* Vertically center the items */
+  }
+  
+  .hijri-date span, .gregorian-date span {
+    display: inline-block;
+  }
+
+  .h3, h3 {
+    font-size: 4rem !important;
+  }
